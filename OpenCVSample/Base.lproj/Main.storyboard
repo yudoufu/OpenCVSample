@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenCVSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zC5-r4-pky">
+                                <rect key="frame" x="94" y="20" width="187.5" height="313.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUS-mQ-hAY">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dpi-NQ-JAM">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="334"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvB-pF-9Ve">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mvB-pF-9Ve" secondAttribute="trailing" id="1YR-4I-vIi"/>
+                                    <constraint firstItem="Dpi-NQ-JAM" firstAttribute="leading" secondItem="NUS-mQ-hAY" secondAttribute="leading" id="6gy-nN-tiK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dpi-NQ-JAM" secondAttribute="bottom" id="P6z-Ai-yP9"/>
+                                    <constraint firstItem="Dpi-NQ-JAM" firstAttribute="width" secondItem="mvB-pF-9Ve" secondAttribute="width" id="RVO-RW-AWs"/>
+                                    <constraint firstItem="mvB-pF-9Ve" firstAttribute="top" secondItem="NUS-mQ-hAY" secondAttribute="top" id="bAy-vZ-dNJ"/>
+                                    <constraint firstItem="mvB-pF-9Ve" firstAttribute="leading" secondItem="Dpi-NQ-JAM" secondAttribute="trailing" id="gBp-tR-bP6"/>
+                                    <constraint firstAttribute="bottom" secondItem="mvB-pF-9Ve" secondAttribute="bottom" id="gpZ-0t-Wya"/>
+                                    <constraint firstItem="Dpi-NQ-JAM" firstAttribute="top" secondItem="NUS-mQ-hAY" secondAttribute="top" id="zYt-vm-H5a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zC5-r4-pky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4tW-KJ-ndC"/>
+                            <constraint firstItem="NUS-mQ-hAY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Gz1-mZ-y0b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NUS-mQ-hAY" secondAttribute="bottom" id="LNr-Hg-Rc8"/>
+                            <constraint firstItem="NUS-mQ-hAY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MH4-nf-qJf"/>
+                            <constraint firstItem="NUS-mQ-hAY" firstAttribute="top" secondItem="zC5-r4-pky" secondAttribute="bottom" id="Mn2-QM-t7O"/>
+                            <constraint firstAttribute="trailing" secondItem="NUS-mQ-hAY" secondAttribute="trailing" id="b4l-58-Wb7"/>
+                            <constraint firstItem="zC5-r4-pky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cnv-wX-JaS"/>
+                            <constraint firstItem="zC5-r4-pky" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="wKK-6U-u8V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="Dpi-NQ-JAM" id="q3u-lN-M49"/>
+                        <outlet property="previewImageView2" destination="mvB-pF-9Ve" id="RTv-JW-Xu0"/>
+                        <outlet property="previewView" destination="zC5-r4-pky" id="cf7-j6-Va8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
